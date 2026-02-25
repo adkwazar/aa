@@ -1,0 +1,15 @@
+aminokwasy = list(test_letter_acc.keys())
+ile = []
+
+for elem in aminokwasy:
+    wart_G = []
+    
+    for i in range(557):
+        for j in range(len(sekwencje[i])):
+            if sekwencje[i][j] == elem:
+                wart_G.append(wartosci[i][j])
+    
+    from collections import Counter
+    ile.append(max(Counter(wart_G).values())/sum(Counter(wart_G).values()))
+
+d = dict(zip(aminokwasy, ile))
